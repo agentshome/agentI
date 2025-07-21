@@ -1,0 +1,10 @@
+# 忽略 __pycache__ 目录
+__pycache__/
+
+# 忽略 .env 文件
+.env
+
+# 忽略敏感配置文件
+config/key_config
+config/sqlkey
+config/config.yaml

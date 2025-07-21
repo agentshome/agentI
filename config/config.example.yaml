@@ -1,0 +1,28 @@
+# Model and API Configuration
+# Copy this file to config.yaml and customize it.
+
+# Specify which models to use by default
+active_models:
+  llm: deepseek
+  vlm: qwen
+
+# Configuration for available Large Language Models (LLMs)
+llms:
+  deepseek:
+    model_name: "deepseek-chat"
+    api_base_url: "https://api.deepseek.com/v1"
+    api_key_name: "DEEPSEEK_API_KEY" # This name will be used to look up the key in your .env file
+
+# Configuration for available Vision Language Models (VLMs)
+vlms:
+  qwen:
+    model_name: "qwen-vl-plus"
+    # The Dashscope SDK for Qwen does not require a base URL, it's handled internally.
+    api_key_name: "DASHSCOPE_API_KEY"
+
+# Mapping from image category to database table name
+database_tables:
+  "活动": "activity_log"
+  "论文": "paper_info"
+  "经验": "exp"
+  "default": "general_info" # A fallback table for un-mapped categories
